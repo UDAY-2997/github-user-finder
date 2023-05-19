@@ -1,11 +1,15 @@
 import './style/index.css'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Search } from './components/Search';
+import { User } from './components/User';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-
-    </div>
+     <Routes>
+      <Route path="/" element={<Search />} />
+      <Route path="/user/:username" element={<User />} />
+    </Routes>
   );
-}
-
+};
 export default App;

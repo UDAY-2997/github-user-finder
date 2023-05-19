@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+body {
+  background-color: #05060d;
+  color: #efefef;
+}
+
+.container {
+  width: min(100% - 30px, 1280px);
+  margin-inline: auto;
+}
+
+h1,
+h2 {
+  background: linear-gradient(0deg, rgba(98, 231, 255) 0%, rgba(10, 178, 207) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  /* Set the height of the grid container to fill the viewport */
+}
+
+.flex {
+  display: flex;
+  margin: 20px;
+  gap: 15px;
+}
+
+input[type="text"] {
+  width: 250px;
+  height: 35px;
+  font-weight: 500;
+  color: #212534;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 5px 5px 12px 3px rgba(255, 255, 255, .5);
+  outline: none;
+}
+
+button {
+  width: 100px;
+  height: 35px;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #212534;
+  border-radius: 5px;
+  padding: 0px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(0deg, rgba(98, 231, 255) 0%, rgba(10, 178, 207) 100%);
+  box-shadow: inset 5px 5px 12px 3px rgba(255, 255, 255, .5);
+  outline: none;
+}
+
+.intro {
+  margin-top: 50px;
+  border: 1px solid #efefef;
+  margin-inline: 5px;
+}
