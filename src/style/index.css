@@ -37,7 +37,7 @@ h2 {
 
 .flex {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 20px;
   gap: 15px;
 }
@@ -110,8 +110,9 @@ button {
 }
 
 .intro img {
-  width: 90px;
+  width: 100px;
   border-radius: 50px;
+  border: 2px solid #efefef;
 }
 
 .list {
