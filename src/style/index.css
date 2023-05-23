@@ -5,17 +5,26 @@ body {
   color: #efefef;
 }
 
+ul li {
+  list-style-type: none;
+}
+
 .container {
   width: min(100% - 30px, 1280px);
   margin-inline: auto;
 }
 
 h1,
-h2 {
+h2,
+h3 {
   background: linear-gradient(0deg, rgba(98, 231, 255) 0%, rgba(10, 178, 207) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+h2 {
+  margin: 15px;
 }
 
 .grid {
@@ -24,13 +33,27 @@ h2 {
   justify-content: center;
   text-align: center;
   height: 100vh;
-  /* Set the height of the grid container to fill the viewport */
 }
 
 .flex {
   display: flex;
+  flex-direction: column;
   margin: 20px;
   gap: 15px;
+}
+
+.grid-1 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.info {
+  display: flex;
+  gap: 30px;
+  text-align: center;
+
 }
 
 input[type="text"] {
@@ -40,7 +63,6 @@ input[type="text"] {
   color: #212534;
   border-radius: 5px;
   padding: 5px 10px;
-  cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
@@ -65,8 +87,61 @@ button {
   outline: none;
 }
 
+.git-btn {
+  width: 160px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.center {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 .intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 50px;
   border: 1px solid #efefef;
-  margin-inline: 5px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.intro img {
+  width: 90px;
+  border-radius: 50px;
+}
+
+.list {
+  background: #555;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 600px;
+}
+
+.list a {
+  text-decoration: none;
+  color: #3acfe9;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+
+}
+
+.repo-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.description {
+  display: flex;
+  font-size: 14px;
+}
+
+.date p {
+  font-size: 14px;
+  color: #d9d8d8;
 }

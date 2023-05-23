@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 export const User = () => {
-  const navigate = useNavigate();
   const { username } = useParams();
   const [userData, setUserData] = useState(null);
   const [repositories, setRepositories] = useState([]);
@@ -27,27 +26,62 @@ export const User = () => {
     fetchUserData();
   }, [username]);
 
+   const options = {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric'
+    }
+
+     const formatDate = (date) => {
+        const newDate = new Date(date).toLocaleDateString('en-CA', options);
+        return newDate;
+    }
+
   return (
-    <div className='grid'>
-      <section className='intro'>
+    <div>
       {userData && (
-        <div>
+        <div className='center'>
+        <div className='intro'>
           <img src={userData.avatar_url} alt="Profile" />
-          <h2> {userData.login}</h2>
+          <h2>{userData.login}</h2>
+          <div className='info'>
+            <p><h3>{userData.public_repos}</h3>Repositories </p>
+            <p><h3>{userData.followers}</h3>Followers </p>
+            <p><h3> {userData.following}</h3>Following </p>
+          </div>
+           <div>
+                    <button className='git-btn'
+                        onClick={() => window.location.href = `https://github.com/${username}`}>
+                        Go to Github
+                    </button>
+                </div>
+        </div>
         </div>
       )}
-      </section>
-      
-      <h3>Repositories</h3>
-      {repositories.length > 0 ? (
-        <ul>
-          {repositories.map((repo) => (
-            <li key={repo.id}>{repo.name}</li>
-          ))}
-        </ul>
-      ) : (
-        <p>No repositories found</p>
-      )}
+
+ {repositories.length > 0 ? (
+  <div className='grid-1'>
+    <h2>Repositories</h2>
+    <div>
+      {repositories.map((repo) => (
+        <div className='list' key={repo.id}>
+          <div className='repo-info'>
+          <a href={repo.html_url} target="_blank" rel="noopener noreferrer">{repo.name}</a>
+          <div className='date'>
+          <p>Updated at {formatDate(repo.updated_at)}</p>
+          </div>
+          </div>
+          <div className='description'>
+          <p> {repo.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+) : (
+  <p>No repositories found</p>
+)}
+
     </div>
   );
 };
