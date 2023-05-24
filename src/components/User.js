@@ -80,7 +80,7 @@ export const User = () => {
   </div>
 ) : (
   <div className='none'>
-    <p>No repositories found</p>
+    <h2>No repositories found</h2>
   </div>
 )}
 
