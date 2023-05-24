@@ -45,9 +45,9 @@ export const User = () => {
           <img src={userData.avatar_url} alt="Profile" />
           <h2>{userData.login}</h2>
           <div className='info'>
-            <p><h3>{userData.public_repos}</h3>Repositories </p>
-            <p><h3>{userData.followers}</h3>Followers </p>
-            <p><h3> {userData.following}</h3>Following </p>
+            <div><h3>{userData.public_repos}</h3>Repositories </div>
+            <div><h3>{userData.followers}</h3>Followers </div>
+            <div><h3> {userData.following}</h3>Following </div>
           </div>
            <div>
                     <button className='git-btn'
