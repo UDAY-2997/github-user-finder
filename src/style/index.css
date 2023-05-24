@@ -146,3 +146,7 @@ button {
   font-size: 14px;
   color: #d9d8d8;
 }
+
+.none p {
+  text-align: center;
+}

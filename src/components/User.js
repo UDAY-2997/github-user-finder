@@ -79,7 +79,9 @@ export const User = () => {
     </div>
   </div>
 ) : (
-  <p>No repositories found</p>
+  <div className='none'>
+    <h2>No repositories found</h2>
+  </div>
 )}
 
     </div>
