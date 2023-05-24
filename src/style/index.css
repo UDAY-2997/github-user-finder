@@ -14,6 +14,10 @@ ul li {
   margin-inline: auto;
 }
 
+h1 {
+  font-size: 40px;
+}
+
 h1,
 h2,
 h3 {
@@ -25,6 +29,19 @@ h3 {
 
 h2 {
   margin: 15px;
+}
+
+head {
+  background-color: #555;
+}
+
+.sort button {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.form button {
+
 }
 
 .grid {
